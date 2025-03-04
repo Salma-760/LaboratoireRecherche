@@ -74,9 +74,8 @@ export default function Barre() {
             >
               {/* Ligne statique en bas */}
               <div
-                className={`absolute bottom-0 left-0 w-full h-1 transition-all duration-300 ${
-                  activeMenu === item ? "opacity-0" : "bg-gray-400"
-                }`}
+                className={`absolute bottom-0 left-0 w-full h-1 transition-all duration-300 ${activeMenu === item ? "opacity-0" : "bg-gray-400"
+                  }`}
               ></div>
 
               {/* Élément principal cliquable */}

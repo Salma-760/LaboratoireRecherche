@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import './App.css';
@@ -12,10 +13,20 @@ import Recherche from './pages/Recherche';
 import Publications from './pages/Publications';
 import Formation from './pages/Formation';
 import Emplois from './pages/Emplois';
+=======
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/NavBar";
+import Logo from "./components/Logo";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+>>>>>>> 9e75013a964f3c185add1699758d4e87d89f8430
 
 function App() {
   return (
     <Router>
+<<<<<<< HEAD
       <div>
         <Navbar />
        
@@ -29,6 +40,27 @@ function App() {
           <Route path="/formation/cours" element={<Formation />} />
           <Route path="/emplois/offres" element={<Emplois />} />
         </Routes>
+=======
+      <div className="flex flex-col min-h-screen">
+        {/* Affichage du Logo */}
+        <Logo />
+
+        {/* Navbar collée au Logo */}
+        <div className="relative z-10">
+          <Navbar />
+        </div>
+
+        {/* Contenu principal avec flex-grow pour remplir l'espace */}
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
+
+        {/* Footer toujours en bas */}
+        <Footer />
+>>>>>>> 9e75013a964f3c185add1699758d4e87d89f8430
       </div>
     </Router>
   );
