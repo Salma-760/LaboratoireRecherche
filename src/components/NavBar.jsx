@@ -2,28 +2,28 @@ import { useState, useEffect } from "react";
 
 const menuItems = {
   "Actualités": [
-    { name: "Tous les événements", link: "/evenements" },
-    { name: "Toutes les actualités", link: "/actualites/actualites" },
+    { name: "Tous les événements", link: "/pages/Evenements" },
+    { name: "Toutes les actualités", link: "/pages/Actualités" },
   ],
   "Présentation": [
-    { name: "Notre équipe", link: "/presentation/equipe" },
-    { name: "Notre mission", link: "/presentation/mission" },
+    { name: "Notre équipe", link: "/pages/Equipe" },
+    { name: "Notre mission", link: "/pages/Missions" },
   ],
   "Recherche": [
-    { name: "Projets", link: "/recherche/projets" },
-    { name: "Publications", link: "/recherche/publications" },
+    { name: "Projets", link: "/pages/Projets" },
+    { name: "Publications", link: "/pages/Publications" },
   ],
   "Publications": [
-    { name: "Articles récents", link: "/publications/articles" },
-    { name: "Revues scientifiques", link: "/publications/revues" },
+    { name: "Articles récents", link: "/pages/Articles" },
+    { name: "Revues scientifiques", link: "/pages/Revues" },
   ],
   "Formation": [
-    { name: "Cours en ligne", link: "/formation/cours" },
-    { name: "Ateliers", link: "/formation/ateliers" },
+    { name: "Cours en ligne", link: "/pages/Cours" },
+    { name: "Ateliers", link: "/pages/Ateliers" },
   ],
   "Emplois": [
-    { name: "Offres d'emploi", link: "/emplois/offres" },
-    { name: "Stages", link: "/emplois/stages" },
+    { name: "Offres d'emploi", link: "/pages/Offres" },
+    { name: "Stages", link: "/pages/Stages" },
   ],
 };
 
@@ -62,8 +62,10 @@ export default function Barre() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-200">
-      <nav className="w-full bg-gray-800 shadow-lg p-4 rounded-lg border-4 border-gray-500">
+   <div>
+    <nav div className="relative w-full bg-gray-800 shadow-lg p-4">
+
+      
         <ul className="flex justify-center space-x-8 text-lg font-semibold text-white relative">
           {Object.keys(menuItems).map((item) => (
             <li
